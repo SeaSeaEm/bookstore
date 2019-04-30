@@ -1,0 +1,35 @@
+<h1>Books</h1>
+
+<p *ngIf="!books"><em>Loading...</em></p>
+<br />
+
+<button *ngIf="books" class="btn btn-primary" (click)="new()">New Book</button>
+<br />
+<br />
+<table class='table' *ngIf="books">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publish Date</th>
+        <th>Arrived Date</th>
+        <th>Genres</th>
+        <th>Shelf</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.publishDate | slice:0:10 }}</td>
+        <td>{{ book.arriveDate | slice:0:10 }}</td>
+        <td>{{ book.genres }}</td>
+        <td>{{ book.shelf }}</td>
+        <td>{{ book.quantity }}</td>
+
+        <td><button type="button" class="btn btn-xs" (click)="edit(book.id)">Edit</button></td>
+        <td><button type="button" class="btn btn-xs" (click)="delete(book.id)">Delete</button></td>
+      </tr>
+    </tbody>
+</table>
