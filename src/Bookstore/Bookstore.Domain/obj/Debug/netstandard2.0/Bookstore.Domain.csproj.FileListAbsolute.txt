@@ -1,9 +1,0 @@
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\bin\Debug\netstandard2.0\Bookstore.Domain.deps.json
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\bin\Debug\netstandard2.0\Bookstore.Domain.dll
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.csprojAssemblyReference.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.AssemblyInfoInputs.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.AssemblyInfo.cs
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\bin\Debug\netstandard2.0\Bookstore.Domain.pdb
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.dll
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Domain\obj\Debug\netstandard2.0\Bookstore.Domain.pdb

@@ -51,26 +51,22 @@ export class BookComponent implements OnInit {
         if (this.id) {
             this.bookService.update(this.book)
                 .subscribe(data => {
-                    alert("Book successfully updated.");
+                  alert("Book successfully updated.");
                 });
         } else if (!this.id) {
           this.bookService.create(this.book)
                 .subscribe(data => {
-                    alert("Book successfully created.");
+                  alert("Book successfully created.");
                 });
-        }
-
-        this.router.navigate(["/books"]);
+      }
     }
 
     delete() {
         if (confirm("Are you sure ?")) {
             this.bookService.delete(this.id)
                 .subscribe(data => {
-                    alert("Book successfully deleted.");
+                  alert("Book successfully deleted.");
                 });
-
-            this.router.navigate(["/books"]);
         }
     }
 }

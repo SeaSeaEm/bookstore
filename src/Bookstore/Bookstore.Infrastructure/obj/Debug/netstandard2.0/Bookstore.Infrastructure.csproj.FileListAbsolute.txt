@@ -1,9 +1,0 @@
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\bin\Debug\netstandard2.0\Bookstore.Infrastructure.deps.json
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\bin\Debug\netstandard2.0\Bookstore.Infrastructure.dll
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\bin\Debug\netstandard2.0\Bookstore.Infrastructure.pdb
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.csprojAssemblyReference.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.AssemblyInfo.cs
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.dll
-C:\Users\Caio Cesar\Documents\Projetos\projeto-biblioteca\src\Bookstore\Bookstore.Infrastructure\obj\Debug\netstandard2.0\Bookstore.Infrastructure.pdb
