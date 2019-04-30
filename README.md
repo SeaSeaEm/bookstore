@@ -84,5 +84,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## TODO
 
-* Fix date format when creating/editing a book
-* Search filter is missing
+* Add: Search filter is missing
+* Fix: Arrived date cannot be greater than Published

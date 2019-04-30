@@ -6,44 +6,43 @@ import Book = require("../../../model/book");
 import IBook = Book.IBook;
 
 @Component({
-    selector: "book",
-    templateUrl: "./book.list.component.html"
+  selector: "book",
+  templateUrl: "./book.list.component.html"
 })
 export class BookListComponent implements OnInit {
-    books: IBook[];
+  books: IBook[];
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
-        private bookService: BookService)
-    { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private bookService: BookService) { }
 
-    ngOnInit() {
-        this.loadBooks();
-    }
+  ngOnInit() {
+    this.loadBooks();
+  }
 
   private loadBooks() {
-        this.bookService.getAll()
-            .subscribe(books => {
-              this.books = books;
-            });
-    }
+    this.bookService.getAll()
+      .subscribe(books => {
+        this.books = books;
+      });
+  }
 
-    new() {
-      this.router.navigate(["/books/new"]);
-    }
+  new() {
+    this.router.navigate(["/books/new"]);
+  }
 
-    edit(id: number) {
-      this.router.navigate([`/books/${id}`]);
-    }
+  edit(id: number) {
+    this.router.navigate([`/books/${id}`]);
+  }
 
-    delete(id: number) {
-        if (confirm("Are you sure ?")) {
-            this.bookService.delete(id)
-                .subscribe(data => {
-                  alert("Book successfully deleted.");
-                  this.loadBooks();
-                });
-        }
+  delete(id: number) {
+    if (confirm("Are you sure ?")) {
+      this.bookService.delete(id)
+        .subscribe(data => {
+          alert("Book successfully deleted.");
+          this.loadBooks();
+        });
     }
+  }
 }

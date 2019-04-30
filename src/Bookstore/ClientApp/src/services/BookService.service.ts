@@ -21,13 +21,11 @@ export class BookService {
   }
 
   update(book: IBook) {
-    return this.http.put("/book/update", book)
-      .map(res => res.json());
+    return this.http.put("/book/update", book);
   }
 
   create(book: IBook) {
-    return this.http.post("/book/create", book)
-      .map(res => res.json());
+    return this.http.post("/book/create", book);
   }
 
   delete(id: number) {

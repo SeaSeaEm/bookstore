@@ -4,6 +4,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
+import { DatePipe } from "@angular/common";
 
 import { AppComponent } from "./app.component";
 import { NavMenuComponent } from "./nav-menu/nav-menu.component";
@@ -45,7 +46,7 @@ import { BookComponent } from "./book/create-edit/book.component";
       { path: "books/:id", component: BookComponent }
     ])
   ],
-  providers: [BookService],
+  providers: [BookService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

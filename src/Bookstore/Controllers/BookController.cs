@@ -50,7 +50,7 @@ namespace Bookstore.Application.Controllers
             _iBookService.Insert(book);
             _iUnitOfWork.Complete();
 
-            return Ok();
+            return Ok("Ok");
         }
 
         [HttpPut]
@@ -62,7 +62,7 @@ namespace Bookstore.Application.Controllers
             _iBookService.Update(book);
             _iUnitOfWork.Complete();
 
-            return Ok();
+            return Ok("Ok");
         }
 
         [HttpDelete]
@@ -73,7 +73,7 @@ namespace Bookstore.Application.Controllers
             _iBookService.Delete(book);
             _iUnitOfWork.Complete();
 
-            return Ok();
+            return Ok("Ok");
         }
     }
 }
