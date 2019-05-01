@@ -17,7 +17,6 @@ import { BookService } from "../services/BookService.service";
 
 // Book Component
 import { BookListComponent } from "./book/home/book.list.component";
-//import { BookViewComponent } from "../book/detail/book.detail.component";
 import { BookComponent } from "./book/create-edit/book.component";
 
 @NgModule({
@@ -28,7 +27,6 @@ import { BookComponent } from "./book/create-edit/book.component";
     CounterComponent,
     FetchDataComponent,
     BookListComponent,
-    //BookViewComponent,
     BookComponent
   ],
   imports: [
@@ -41,7 +39,6 @@ import { BookComponent } from "./book/create-edit/book.component";
       { path: "counter", component: CounterComponent },
       { path: "fetch-data", component: FetchDataComponent },
       { path: "books", component: BookListComponent },
-      //{ path: "books/detail/:id", component: BookViewComponent },
       { path: "books/new", component: BookComponent },
       { path: "books/:id", component: BookComponent }
     ])

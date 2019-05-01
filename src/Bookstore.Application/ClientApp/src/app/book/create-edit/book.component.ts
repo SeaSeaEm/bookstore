@@ -61,6 +61,13 @@ export class BookComponent implements OnInit {
   }
 
   submit() {
+    const valid = this.validateDate();
+
+    if (!valid) {
+      alert("Arrived date is invalid for selected publish date. Or selected year is beyond the current year.");
+      return;
+    }
+
     if (this.id) {
       this.bookService.update(this.book)
         .subscribe(data => {
@@ -75,6 +82,45 @@ export class BookComponent implements OnInit {
         });
     }
 
+  }
+
+  private validateDate(): boolean {
+    let valid = true;
+
+    const arrivedYear = this.book.arriveDate.slice(0, 4);
+    const arrivedMonth = this.book.arriveDate.slice(5, 7);
+    const arrivedDay = this.book.arriveDate.slice(8, 10);
+
+    const publishedYear = this.book.publishDate.slice(0, 4);
+    const publishedMonth = this.book.publishDate.slice(5, 7);
+    const publishedDay = this.book.publishDate.slice(8, 10);
+
+    const date = new Date();
+    const invalidYear = parseInt(arrivedYear) > date.getFullYear() || parseInt(publishedYear) > date.getFullYear();
+
+    if (invalidYear) {
+      // Validate if the selected date is beyond the selected
+      valid = false;
+    } else if (parseInt(publishedMonth) > date.getMonth() && parseInt(publishedYear) >= date.getFullYear() ||
+      parseInt(arrivedMonth) > date.getMonth() && parseInt(arrivedYear) >= date.getFullYear()) {
+      // Validate if the month is beyond the selected
+      valid = false;
+    } else if (parseInt(publishedDay) > date.getDay() && parseInt(publishedMonth) > date.getMonth() && parseInt(publishedYear) >= date.getFullYear() ||
+      parseInt(arrivedDay) > date.getDay() && parseInt(arrivedMonth) > date.getMonth() && parseInt(arrivedYear) >= date.getFullYear()) {
+      // Validate if the day is beyond the selected
+      valid = false;
+    } else if (publishedYear > arrivedYear) {
+      valid = false;
+    } else if (publishedYear === arrivedYear &&
+      publishedMonth > arrivedMonth) {
+      valid = false;
+    } else if (publishedYear === arrivedYear &&
+      publishedMonth === arrivedMonth &&
+      publishedDay > arrivedDay) {
+      valid = false;
+    }
+
+    return valid;
   }
 
   delete() {

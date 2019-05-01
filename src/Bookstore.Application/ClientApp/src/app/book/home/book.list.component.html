@@ -6,37 +6,42 @@
 <button *ngIf="books" class="btn btn-primary" (click)="new()">New Book</button>
 <br />
 <br />
-
-<div class="col-xs-4" *ngIf="books">
+<br />
+<div class="col-xs-4" style="margin-bottom: 20px; right: 15px;" *ngIf="books">
   <label for="searchTerm">Search Book by it's title</label>
-  <input type="text" id="searchTerm" class="form-control input-sm" [(ngModel)]="searchTerm" (ngModelChange)="search()" />
+  <input type="text"
+         placeholder="Book's name"
+         id="searchTerm"
+         class="form-control input-sm"
+         [(ngModel)]="searchTerm"
+         (ngModelChange)="search()" />
   <br />
 </div>
 
 <table class='table' *ngIf="books">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Publish Date</th>
-        <th>Arrived Date</th>
-        <th>Genres</th>
-        <th>Shelf</th>
-        <th>Quantity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of filteredBooks">
-        <td>{{ book.title }}</td>
-        <td>{{ book.author }}</td>
-        <td>{{ book.publishDate | slice:0:10 }}</td>
-        <td>{{ book.arriveDate | slice:0:10 }}</td>
-        <td>{{ book.genres }}</td>
-        <td>{{ book.shelf }}</td>
-        <td>{{ book.quantity }}</td>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th title="Day which the book was published">Publish Date</th>
+      <th title="Day which the book was added to the system">Arrived Date</th>
+      <th>Genres</th>
+      <th>Shelf</th>
+      <th title="Stock quantity">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of filteredBooks">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.publishDate | slice:0:10 }}</td>
+      <td>{{ book.arriveDate | slice:0:10 }}</td>
+      <td>{{ book.genres }}</td>
+      <td>{{ book.shelf }}</td>
+      <td>{{ book.quantity }}</td>
 
-        <td><button type="button" class="btn btn-xs" (click)="edit(book.id)">Edit</button></td>
-        <td><button type="button" class="btn btn-xs" (click)="delete(book.id)">Delete</button></td>
-      </tr>
-    </tbody>
+      <td><button type="button" class="btn btn-xs" (click)="edit(book.id)">Edit</button></td>
+      <td><button type="button" class="btn btn-xs" (click)="delete(book.id)">Delete</button></td>
+    </tr>
+  </tbody>
 </table>
