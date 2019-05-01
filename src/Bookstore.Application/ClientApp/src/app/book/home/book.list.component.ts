@@ -11,6 +11,8 @@ import IBook = Book.IBook;
 })
 export class BookListComponent implements OnInit {
   books: IBook[];
+  filteredBooks: IBook[];
+  searchTerm: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +27,7 @@ export class BookListComponent implements OnInit {
     this.bookService.getAll()
       .subscribe(books => {
         this.books = books;
+        this.filteredBooks = books;
       });
   }
 
@@ -44,5 +47,11 @@ export class BookListComponent implements OnInit {
           this.loadBooks();
         });
     }
+  }
+
+  search(): void {
+    const searchedBook = this.searchTerm.toLowerCase();
+
+    this.filteredBooks = this.bookService.search(searchedBook, this.books);
   }
 }

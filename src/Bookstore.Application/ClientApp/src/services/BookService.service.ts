@@ -31,4 +31,8 @@ export class BookService {
   delete(id: number) {
     return this.http.delete(`/book/delete/${id}`);
   }
+
+  search(searchedBook: string, books: IBook[]): IBook[] {
+    return books.filter(book => book.title.toLowerCase().indexOf(searchedBook) >= 0);
+  }
 }

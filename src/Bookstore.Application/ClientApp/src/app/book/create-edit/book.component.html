@@ -4,7 +4,6 @@
 <br />
 
 <form #form="ngForm" (ngSubmit)="submit()" novalidate>
-  {{ book | json }}
   <div class="form-group">
     <label for="title">Title</label>
     <input id="title" type="text" class="form-control" [maxLength]="100" [(ngModel)]="book.title" name="title" required #title="ngModel"/>
