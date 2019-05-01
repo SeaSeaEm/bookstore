@@ -45,4 +45,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## TODO
 
-* Fix: Arrived date cannot be greater than Published
+* Fix: Remove unused classes (created by visual studio when selected project)
