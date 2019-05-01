@@ -51,7 +51,7 @@ export class BookComponent implements OnInit {
 
             if (err.status === 404) {
               alert("Page not found :( !");
-              this.router.navigate(["/home"]);
+              this.router.navigate(["/books"]);
             }
           });
     } else {
@@ -65,15 +65,16 @@ export class BookComponent implements OnInit {
       this.bookService.update(this.book)
         .subscribe(data => {
           alert("Book successfully updated.");
+          this.router.navigate(["/books"]);
         });
     } else if (!this.id) {
       this.bookService.create(this.book)
         .subscribe(data => {
           alert("Book successfully created.");
+          this.router.navigate(["/books"]);
         });
     }
 
-    this.router.navigate(["/home"]);
   }
 
   delete() {
@@ -81,9 +82,8 @@ export class BookComponent implements OnInit {
       this.bookService.delete(this.id)
         .subscribe(data => {
           alert("Book successfully deleted.");
+          this.router.navigate(["/books"]);
         });
     }
-
-    this.router.navigate(["/home"]);
   }
 }
