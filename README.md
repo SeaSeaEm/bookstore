@@ -84,5 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## TODO
 
-* Add: Search filter is missing
 * Fix: Arrived date cannot be greater than Published
