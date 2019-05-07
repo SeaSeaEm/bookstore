@@ -25,19 +25,19 @@ namespace Bookstore.Domain.Services.Implementation
             return _iBookRepository.Get(a => a.Id == id);
         }
 
-        public void Insert(Book course)
+        public void Insert(Book book)
         {
-            _iBookRepository.Insert(course);
+            _iBookRepository.Insert(book);
         }
 
-        public void Update(Book course)
+        public void Update(Book book)
         {
-            _iBookRepository.Update(course);
+            _iBookRepository.Update(book);
         }
 
-        public void Delete(Book course)
+        public void Delete(Book book)
         {
-            _iBookRepository.Delete(course);
+            _iBookRepository.Delete(book);
         }
     }
 }
