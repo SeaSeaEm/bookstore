@@ -11,6 +11,6 @@ namespace Bookstore.Domain.Services
         Book Get(int id);
         void Insert(Book book);
         void Update(Book book);
-        void Delete(Book id);
+        void Delete(Book book);
     }
 }
